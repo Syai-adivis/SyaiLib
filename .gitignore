@@ -1,0 +1,9 @@
+*.exe
+*.obj
+*.o
+*.vsix
+*.a
+范本/
+test/
+*.tmp
+*.log
