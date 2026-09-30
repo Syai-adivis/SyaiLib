@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Sylib_Console",
+            "type": "shell",
+            "command": "if (!(Test-Path build)) { New-Item -ItemType Directory -Path build }; g++ -c src/SyConsole.cpp -o build/SyConsole.o -Iinclude; ar rcs build/SyConsole.a build/SyConsole.o",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Justlib_Console_opr"
+        }
+    ]
+}

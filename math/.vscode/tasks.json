@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Sylib_math",
+            "type": "shell",
+            "command": "if (!(Test-Path build)) { New-Item -ItemType Directory -Path build }; g++ -c src/Symath.cpp -o build/Symath.o -Iinclude; ar rcs build/Symath.a build/Symath.o",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Sylib_math"
+        }
+    ]
+}

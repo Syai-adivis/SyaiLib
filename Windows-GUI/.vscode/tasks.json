@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Syib_GUI",
+            "type": "shell",
+            "command": "if (!(Test-Path build)) { New-Item -ItemType Directory -Path build }; g++ -c src/Sygui.cpp -o build/Sygui.o -Iinclude; ar rcs build/Sygui.a build/Sygui.o",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Sylib_GUI"
+        }
+    ]
+}

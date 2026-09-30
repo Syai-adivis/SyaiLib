@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Sylib_graph",
+            "type": "shell",
+            "command": "if (!(Test-Path build)) { New-Item -ItemType Directory -Path build }; g++ -c src/SyGraph.cpp -o build/SyGraph.o -Iinclude; ar rcs build/SyGraph.a build/SyGraph.o",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Sylib_graph"
+        }
+    ]
+}
