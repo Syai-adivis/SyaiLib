@@ -1,6 +1,7 @@
 // includes
 #include <string>  //stdc++ string
 #include <cstdint> //stdc inttypes
+#include <vector>  //stdc++ vector
 // add-syntax
 // Helper
 #if !(defined(CONCAT) && defined(CONCAT_INPL))
@@ -45,13 +46,22 @@
 #if !defined(var)
 #define var auto
 #endif
+// begin block
+#if !defined(begin)
+#define begin {
+#endif
+// end block
+#if !defined(end)
+#define end }
+#endif
 // types
 typedef int Idef;
-typedef double lFloat;
-typedef long Ilong;
-typedef long long Ilongl;
-typedef long double llFloat;
-typedef float Float;
+typedef double Float;
+typedef long Imid;
+typedef long long Ilong;
+typedef long double lFloat;
+typedef float sFloat;
 typedef std::string String;
 typedef char Char;
 typedef int8_t Byte;
+typedef std::vector<Byte> Bytes;
